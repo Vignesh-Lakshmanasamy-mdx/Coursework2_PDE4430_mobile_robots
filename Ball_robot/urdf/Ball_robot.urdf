@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Ball_robot">
+
+    <link name="base_footprint">
+    	<visual>
+    		<origin xyz="0 0 0" rpy="0 0 0"/>
+    		<geometry>
+    			<box size="0.001 0.001 0.001"/>
+    		</geometry>
+    	</visual>
+    </link>
+    
+    <gazebo reference="base_footprint">
+    	<turnGravityOff>false</turnGravityOff>
+    </gazebo>
+    
+    <joint name="base_footprint_joint" type="fixed">
+    	<origin xyz="0 0 0.04" rpy="3.14 3.14 0"/>
+    	<parent link="base_footprint"/>
+    	<child link="base_link"/>
+    </joint>
+
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="5.46840626526142" />
+      <inertia
+        ixx="0.142712269887465"
+        ixy="1.38094742076743E-08"
+        ixz="-0.00162299522382511"
+        iyy="0.0806392914710564"
+        iyz="-1.37877240871511E-08"
+        izz="0.208143297265731" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Ball_robot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Ball_robot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="LW">
+    <inertial>
+      <origin
+        xyz="0 0.00999999999999998 -5.063365338579E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.105832402517806" />
+      <inertia
+        ixx="7.02666488891342E-05"
+        ixy="3.24657686902134E-37"
+        ixz="-1.16070861992056E-37"
+        iyy="0.000135863451198401"
+        iyz="4.54183257214983E-37"
+        izz="7.02666488891342E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Ball_robot/meshes/LW.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Ball_robot/meshes/LW.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LW_joint"
+    type="continuous">
+    <origin
+      xyz="-0.125 -0.23 0.05"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="LW" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="RW">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 -0.01 5.7745189778732E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.105832402517806" />
+      <inertia
+        ixx="7.02666488891342E-05"
+        ixy="4.8128425556487E-23"
+        ixz="8.33569721138529E-22"
+        iyy="0.000135863451198401"
+        iyz="1.05819533575749E-21"
+        izz="7.02666488891342E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Ball_robot/meshes/RW.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Ball_robot/meshes/RW.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RW_joint"
+    type="continuous">
+    <origin
+      xyz="-0.125 0.23 0.05"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RW" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="LC">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00418879020478639" />
+      <inertia
+        ixx="1.67551608191456E-07"
+        ixy="1.04914126869469E-27"
+        ixz="2.59966387807355E-26"
+        iyy="1.67551608191456E-07"
+        iyz="2.57787664477494E-24"
+        izz="1.67551608191456E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Ball_robot/meshes/LC.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Ball_robot/meshes/LC.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LC_joint"
+    type="continuous">
+    <origin
+      xyz="0.183 -0.1875 0.01"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="LC" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="RC">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00418879020478639" />
+      <inertia
+        ixx="1.67551608191456E-07"
+        ixy="-5.90597443009158E-24"
+        ixz="2.05802570796199E-25"
+        iyy="1.67551608191456E-07"
+        iyz="-4.53900653074979E-25"
+        izz="1.67551608191456E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Ball_robot/meshes/RC.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Ball_robot/meshes/RC.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RC_joint"
+    type="continuous">
+    <origin
+      xyz="0.183 0.1875 0.01"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RC" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="LH">
+    <inertial>
+      <origin
+        xyz="0.000972544685370363 0.0912870295675588 -0.0686364518431897"
+        rpy="0 0 0" />
+      <mass
+        value="1.77363343037242" />
+      <inertia
+        ixx="0.00814660078140775"
+        ixy="-5.57338068416347E-05"
+        ixz="2.24435737951626E-06"
+        iyy="0.00291579105052976"
+        iyz="0.000210664580811583"
+        izz="0.00541699942635331" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Ball_robot/meshes/LH.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Ball_robot/meshes/LH.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LH_joint"
+    type="revolute">
+    <origin
+      xyz="0.19 -0.1875 0.174"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="LH" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="RH">
+    <inertial>
+      <origin
+        xyz="0.00082503 -0.091288 -0.068636"
+        rpy="0 0 0" />
+      <mass
+        value="1.7736" />
+      <inertia
+        ixx="0.0081468"
+        ixy="4.7281E-05"
+        ixz="1.9039E-06"
+        iyy="0.0029156"
+        iyz="-0.00021067"
+        izz="0.005417" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Ball_robot/meshes/RH.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Ball_robot/meshes/RH.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RH_joint"
+    type="revolute">
+    <origin
+      xyz="0.19 0.1875 0.174"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RH" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="0"
+      effort="100"
+      velocity="100" />
+  </joint>
+
+<gazebo>
+  <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+
+    <!-- Plugin update rate in Hz -->
+    <updateRate>10</updateRate>
+
+    <!-- Name of left joint, defaults to `left_joint` -->
+    <leftJoint>LW_joint</leftJoint>
+
+    <!-- Name of right joint, defaults to `right_joint` -->
+    <rightJoint>RW_joint</rightJoint>
+
+    <!-- The distance from the center of one wheel to the other, in meters, defaults to 0.34 m -->
+    <wheelSeparation>0.42</wheelSeparation>
+
+    <!-- Diameter of the wheels, in meters, defaults to 0.15 m -->
+    <wheelDiameter>0.10</wheelDiameter>
+
+    <!-- Wheel acceleration, in rad/s^2, defaults to 0.0 rad/s^2 -->
+    <wheelAcceleration>1.0</wheelAcceleration>
+
+    <!-- Maximum torque which the wheels can produce, in Nm, defaults to 5 Nm -->
+    <wheelTorque>20</wheelTorque>
+
+    <!-- Topic to receive geometry_msgs/Twist message commands, defaults to `cmd_vel` -->
+    <commandTopic>cmd_vel</commandTopic>
+
+    <!-- Topic to publish nav_msgs/Odometry messages, defaults to `odom` -->
+    <odometryTopic>odom</odometryTopic>
+
+    <!-- Odometry frame, defaults to `odom` -->
+    <odometryFrame>odom</odometryFrame>
+
+    <!-- Robot frame to calculate odometry from, defaults to `base_footprint` -->
+    <robotBaseFrame>base_footprint</robotBaseFrame>
+
+    <!-- Odometry source, 0 for ENCODER, 1 for WORLD, defaults to WORLD -->
+    <odometrySource>1</odometrySource>
+
+    <!-- Set to true to publish transforms for the wheel links, defaults to false -->
+    <publishWheelTF>true</publishWheelTF>
+
+    <!-- Set to true to publish transforms for the odometry, defaults to true -->
+    <publishOdom>true</publishOdom>
+
+    <!-- Set to true to publish sensor_msgs/JointState on /joint_states for the wheel joints, defaults to false -->
+    <publishWheelJointState>true</publishWheelJointState>
+
+    <!-- Set to true to swap right and left wheels, defaults to true -->
+    <legacyMode>false</legacyMode>
+  </plugin>
+</gazebo>
+
+</robot>

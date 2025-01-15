@@ -4,6 +4,12 @@
 
  -- To create a own robot which can carry the 3 different size balls to the pen or goal post.
 
+**Explanation Video Link** : https://youtu.be/gI1i30AmkAc
+
+**Working of the robot in gazebo** : https://youtu.be/bFBfxCGDgzk
+
+ note : the working video is in 3X speed
+
 **Process involved** :
 
 **Step 1**:

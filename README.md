@@ -33,11 +33,22 @@
 -- design the Caster wheel for the robot
 -- the caster wheel should touch the base reference plane of the robot design. if not it may cause balancing problem in the robot in gazebo environment
 
-**Step 5 ** :
+**Step 5** :
 
 -- Design the front shutter for the robot to lock the ball in place.
 
 **Step 6** :
 
 -- Assemble the entire robot in the soldiworks. Two wheels at the back of the robot and two caster wheel at the front area and the locking door or end effector in the pin in have
+
+**Step 7** :
+
+-- create axis, co ordinate system and point for each wheel,caster and end effector.
+
+![Screenshot 2025-01-15 235249](https://github.com/user-attachments/assets/c4eec451-babb-41f4-bb58-e763491baafb)
+
+-- as shown in the image. name it in a proper way to identify in easily.
+
+-- create the plane and co ordinate for the base plane level, this should be the gazebo ground after the convertion to urdf.
+
 

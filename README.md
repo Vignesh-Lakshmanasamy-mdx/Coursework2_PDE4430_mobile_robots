@@ -51,4 +51,19 @@
 
 -- create the plane and co ordinate for the base plane level, this should be the gazebo ground after the convertion to urdf.
 
+**Step 8** :
+
+![Screenshot 2025-01-15 235643](https://github.com/user-attachments/assets/1debf41f-bb4f-486c-9a72-cf89804b8a5f)
+
+-- as shown in the figure create the parent and child link for the robot with appropriate axis and coordinates
+
+-- for the joint type : wheel and caster is continuous but the end effector is revolute joints
+
+**Step 9** :
+
+-- go to Preview and Export -> clearly check the axis , coordinates, joint type and max limit for the components
+
+-- click next to check the inertia and weight of the robot to avoid gazebo conflicts. 
+
+![Screenshot 2025-01-16 000231](https://github.com/user-attachments/assets/16053c35-b237-428d-b3cc-d2b85ff3c7df)
 

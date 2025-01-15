@@ -84,7 +84,23 @@ https://classic.gazebosim.org/tutorials?tut=ros_gzplugins#DifferentialDrive
 
 1. Pull the file from github and add it to the catkin_ws/src folder
 2. In terminal go to catkin_ws and run
-   catkin_make
-   source devel/setup.bash
 
+          catkin_make
+          source devel/setup.bash
+
+3. To get entire assessment world, robot and the ball in gazebo type in new terminal, 
+
+          roslaunch Ball_robot coursework.launch
    
+4. To run the robot using teleoperation keyboard, use
+
+          rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+
+   if teleop_twist_keyboard not installed follow the instruction in the http://wiki.ros.org/teleop_twist_keyboard
+
+5. To run the custom made teleop keyboard, use
+
+          rosrun Ball_robot keyboard.py
+
+6. 
+            

@@ -79,3 +79,12 @@
 
 -- add the gazebo plugin for the differential drive
 https://classic.gazebosim.org/tutorials?tut=ros_gzplugins#DifferentialDrive
+
+**Instruction to execute the project** :
+
+1. Pull the file from github and add it to the catkin_ws/src folder
+2. In terminal go to catkin_ws and run
+   catkin_make
+   source devel/setup.bash
+
+   

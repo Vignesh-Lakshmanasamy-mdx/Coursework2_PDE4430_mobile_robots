@@ -9,12 +9,39 @@ for Ball_robot robot</p>
   <author>TODO</author>
   <maintainer email="TODO@email.com" />
   <license>BSD</license>
+
+
   <buildtool_depend>catkin</buildtool_depend>
+  
   <depend>roslaunch</depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>trajectory_msgs</build_depend>
+  <build_depend>controller_manager</build_depend>
+  <build_depend>joint_state_controller</build_depend>
+  <build_depend>position_controllers</build_depend>
+  <build_depend>controller_interface</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>gazebo_ros</build_depend>
+
   <depend>robot_state_publisher</depend>
   <depend>rviz</depend>
+  <depend>joint_state_publisher</depend>
   <depend>joint_state_publisher_gui</depend>
   <depend>gazebo</depend>
+
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>trajectory_msgs</exec_depend>
+  
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>controller_manager</exec_depend>
+  <exec_depend>joint_state_controller</exec_depend>
+  <exec_depend>position_controllers</exec_depend>
+  <exec_depend>controller_interface</exec_depend>
+
   <export>
     <architecture_independent />
   </export>

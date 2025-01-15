@@ -289,6 +289,7 @@
       effort="100"
       velocity="100" />
   </joint>
+  
   <link
     name="LH">
     <inertial>
@@ -346,6 +347,7 @@
       upper="3.14"
       effort="100"
       velocity="100" />
+      <dynamics damping="0.1" friction="0.1"/>
   </joint>
   <link
     name="RH">
@@ -404,8 +406,34 @@
       upper="0"
       effort="100"
       velocity="100" />
+      <dynamics damping="0.1" friction="0.1"/>
   </joint>
 
+<!--hand-->
+
+  <transmission name="LH_transmission">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="LH_joint">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="LH_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="RH_transmission">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="RH_joint">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="RH_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+
+
+<!--gazebo-->
 <gazebo>
   <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
 

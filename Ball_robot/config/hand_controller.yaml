@@ -1,0 +1,13 @@
+
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  hand_controller:
+    type: position_controllers/JointPositionController
+    joints:
+      - LH_joint
+      - RH_joint
+    gains:
+      LH_joint: {p: 100.0, i: 0.01, d: 10.0}
+      RH_joint: {p: 100.0, i: 0.01, d: 10.0}

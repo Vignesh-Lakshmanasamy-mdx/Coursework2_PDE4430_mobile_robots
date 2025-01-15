@@ -31,7 +31,7 @@
     name="spawn_model"
     pkg="gazebo_ros"
     type="spawn_model"
-    args="-file $(find Ball_robot)/urdf/Ball_robot.urdf -urdf -model Ball_robot"
+    args="-file $(find Ball_robot)/urdf/Ball_robot.urdf -urdf -model Ball_robot -x .5 -y.5 -z 1"
     output="screen" />
   <node
     name="fake_joint_calibration"

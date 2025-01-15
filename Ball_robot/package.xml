@@ -24,6 +24,8 @@ for Ball_robot robot</p>
   <build_depend>controller_interface</build_depend>
   <build_depend>std_msgs</build_depend>
   <build_depend>gazebo_ros</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  
 
   <depend>robot_state_publisher</depend>
   <depend>rviz</depend>
@@ -41,6 +43,8 @@ for Ball_robot robot</p>
   <exec_depend>joint_state_controller</exec_depend>
   <exec_depend>position_controllers</exec_depend>
   <exec_depend>controller_interface</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  
 
   <export>
     <architecture_independent />

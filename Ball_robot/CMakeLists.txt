@@ -13,9 +13,11 @@ find_package(catkin REQUIRED
   position_controllers
   controller_interface
   robot_state_publisher
+  geometry_msgs
+  
 )
 
-catkin_package(CATKIN_DEPENDS  roscpp rospy trajectory_msgs std_msgs gazebo_ros controller_manager joint_state_controller position_controllers controller_interface robot_state_publisher)
+catkin_package(CATKIN_DEPENDS  roscpp geometry_msgs rospy trajectory_msgs std_msgs gazebo_ros controller_manager joint_state_controller position_controllers controller_interface robot_state_publisher)
 
 find_package(roslaunch)
 

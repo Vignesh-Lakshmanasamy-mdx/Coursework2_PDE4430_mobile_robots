@@ -19,7 +19,7 @@ def move():
 	vel_msg = Twist()
 	stop(vel_msg)
 
-	print("Use w,s,a,d to move the bot and press q for exit")
+	print("Use w,s,a,d to move the Robot and press q for exit")
 
 	while not rospy.is_shutdown():
 		keyPressed = input()
@@ -28,16 +28,16 @@ def move():
 			pub.publish(vel_msg)
 			break
 		elif keyPressed=='w':
-			vel_msg.linear.x = vel_msg.linear.x + 1
+			vel_msg.linear.x = vel_msg.linear.x + 0.5
 
 		elif keyPressed=='a':
-			vel_msg.angular.z = vel_msg.angular.z + 1
+			vel_msg.angular.z = vel_msg.angular.z + 0.5
 
 		elif keyPressed=='s':
-			vel_msg.linear.x = vel_msg.linear.x - 1
+			vel_msg.linear.x = vel_msg.linear.x - 0.5
 
 		elif keyPressed=='d':
-			vel_msg.angular.z = vel_msg.angular.z + 1
+			vel_msg.angular.z = vel_msg.angular.z - 0.5
 
 		elif keyPressed=='x':
 			stop(vel_msg)

@@ -4,6 +4,8 @@
 
  -- To create a own robot which can carry the 3 different size balls to the pen or goal post.
 
+**Process involved** :
+
 **Step 1**:
 
 -- Designing our own robot in Solidworkd or Fusion 360 or Freecad. 
@@ -67,3 +69,13 @@
 
 ![Screenshot 2025-01-16 000231](https://github.com/user-attachments/assets/16053c35-b237-428d-b3cc-d2b85ff3c7df)
 
+**Step 10** :
+
+-- export the file . solidworks automatically generate the urdf,mesh,config,package,cmake_list and launch files.
+
+-- copy the file and bring to Catkin_WS /src file 
+
+--  Edit the urdf file to add the foot_print for the robot.
+
+-- add the gazebo plugin for the differential drive
+https://classic.gazebosim.org/tutorials?tut=ros_gzplugins#DifferentialDrive

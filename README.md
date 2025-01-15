@@ -8,14 +8,16 @@
 
 **Working of the robot in gazebo** : https://youtu.be/bFBfxCGDgzk
 
- note : the working video is in 3X speed
+ note : the working video is in 4X speed
 
 **Process involved** :
 
 **Step 1**:
 
 -- Designing our own robot in Solidworkd or Fusion 360 or Freecad. 
+
 -- I am using solidworks 2025 to create my design
+
 -- Install the URDF pulgin for the software to convert the design to urdf file.
 
 **Step2**:

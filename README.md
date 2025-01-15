@@ -20,7 +20,7 @@
 
 -- I am using solidworks 2025 to create my design
 
--- Install the URDF pulgin for the software to convert the design to urdf file.
+-- Install the URDF plugin for the software to convert the design to urdf file.
 
 **Step2**:
 

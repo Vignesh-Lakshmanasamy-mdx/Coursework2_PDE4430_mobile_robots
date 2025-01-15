@@ -91,16 +91,22 @@ https://classic.gazebosim.org/tutorials?tut=ros_gzplugins#DifferentialDrive
 3. To get entire assessment world, robot and the ball in gazebo type in new terminal, 
 
           roslaunch Ball_robot coursework.launch
-   
-4. To run the robot using teleoperation keyboard, use
+
+![Screenshot 2025-01-16 002837](https://github.com/user-attachments/assets/7a998e38-589d-4659-a16b-afe320c62c09)
+
+5. To run the robot using teleoperation keyboard, use
 
           rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 
    if teleop_twist_keyboard not installed follow the instruction in the http://wiki.ros.org/teleop_twist_keyboard
 
-5. To run the custom made teleop keyboard, use
+6. To run the custom made teleop keyboard, use
 
           rosrun Ball_robot keyboard.py
 
-6. 
-            
+7. To view the rqt_graph
+
+         rosrun rqt_graph rqt_graph
+   
+![Screenshot 2025-01-16 003006](https://github.com/user-attachments/assets/c696f26a-10c5-4995-a9c8-146759f30f78)
+
